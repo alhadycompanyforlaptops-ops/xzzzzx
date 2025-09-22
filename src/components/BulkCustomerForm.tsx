@@ -289,50 +289,7 @@ export const BulkCustomerForm = ({ onSave, onCancel }: BulkCustomerFormProps) =>
                           <Label htmlFor={`arrival_time_${index}`}>وقت وصول الخط</Label>
                           <Input
                             id={`arrival_time_${index}`}
-                            type="time"
-                            value={customer.arrival_time}
-                            onChange={(e) => updateCustomer(index, 'arrival_time', e.target.value)}
-                          />
-                        </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor={`provider_${index}`}>مزود الخدمة</Label>
-                          <Select 
-                            value={customer.provider} 
-                            onValueChange={(value) => updateCustomer(index, 'provider', value)}
-                          >
-                            <SelectTrigger>
-                              <SelectValue placeholder="اختر مزود الخدمة" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="orange">Orange</SelectItem>
-                              <SelectItem value="etisalat">Etisalat</SelectItem>
-                              <SelectItem value="we">WE</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor={`ownership_${index}`}>ملكية الخط</Label>
-                          <Select 
-                            value={customer.ownership} 
-                            onValueChange={(value) => updateCustomer(index, 'ownership', value)}
-                          >
-                            <SelectTrigger>
-                              <SelectValue placeholder="اختر مالك الخط" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="nader">Nader</SelectItem>
-                              <SelectItem value="amer">Amer</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-
-                        <div className="space-y-2">
-                          <Label htmlFor={`arrival_time_${index}`}>وقت وصول الخط</Label>
-                          <Input
-                            id={`arrival_time_${index}`}
-                            type="time"
+                            type="date"
                             value={customer.arrival_time}
                             onChange={(e) => updateCustomer(index, 'arrival_time', e.target.value)}
                           />

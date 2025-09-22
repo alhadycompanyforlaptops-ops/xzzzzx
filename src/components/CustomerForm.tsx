@@ -171,7 +171,7 @@ export const CustomerForm = ({ customer, onSave, onCancel }: CustomerFormProps) 
                 <Label htmlFor="arrival_time">وقت وصول الخط</Label>
                 <Input
                   id="arrival_time"
-                  type="time"
+                  type="date"
                   value={formData.arrival_time || ''}
                   onChange={(e) => setFormData({ ...formData, arrival_time: e.target.value })}
                 />

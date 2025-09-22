@@ -166,7 +166,7 @@ export const UserDashboard = ({ userType, username }: UserDashboardProps) => {
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">وقت الوصول:</span>
-                  <span className="text-indigo-600 font-semibold">{customer.arrival_time || 'غير محدد'}</span>
+                  <span className="text-indigo-600 font-semibold">{customer.arrival_time ? formatDate(customer.arrival_time) : 'غير محدد'}</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
